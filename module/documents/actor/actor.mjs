@@ -2384,6 +2384,7 @@ export default class Actor5e extends SystemDocumentMixin(Actor) {
 
     this._getRestHitDiceRecovery(config, result);
     this._getRestHitPointRecovery(config, result);
+    this._getRestAttributesRecovery(config, result);
     this._getRestResourceRecovery(config, result);
     this._getRestSpellRecovery(config, result);
     await this._getRestItemUsesRecovery(config, result);
@@ -2564,6 +2565,35 @@ export default class Actor5e extends SystemDocumentMixin(Actor) {
     foundry.utils.setProperty(
       result, "deltas.hitPoints", (result.deltas?.hitPoints ?? 0) + Math.max(0, max - hp.value)
     );
+  }
+
+  /* -------------------------------------------- */
+  
+  /**
+   * Recover actor attributes like exhaustion and inspiration.
+   * @param {object} [config]
+   * @param {boolean} [config.isLongRest]       Recover attributes that return on short rest.
+   * @param {boolean} [config.isResourceful]    Recover attributes with feature Resourceful.
+   * @param {int} [config.currentExhaustion]    Current level of exhaustion of the actor.
+   * @param {RestResult} [result={}]            Rest result being constructed
+   * @protected
+   */
+  _getRestAttributesRecovery({ isLongRest, isResourceful, currentExhaustion, ...config }={}, result={}) {
+    isLongRest ??= config.type === "long";
+    isResourceful ??= this.flags.dnd5e.resourceful === true;
+    currentExhaustion ??= this.system.attributes.exhaustion ?? 0;
+    // Only recovers attributes on Long Rests.
+    if ( !isLongRest ) return;
+    
+    // Recover a level of exhaustion if actor has at least one level.
+    if ( currentExhaustion ) {
+      result.updateData['system.attributes.exhaustion'] = currentExhaustion - 1;
+    }
+
+    // Give Heroic Inspiration when actor has the Resourceful species trait.
+    if ( isResourceful ) {
+      result.updateData['system.attributes.inspiration'] = true;
+    }
   }
 
   /* -------------------------------------------- */

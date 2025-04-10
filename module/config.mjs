@@ -4310,6 +4310,12 @@ DND5E.characterFlags = {
     section: "DND5E.Feats",
     type: Number,
     placeholder: 0
+  },
+  resourceful: {
+    name: "DND5E.FlagsResourceful",
+    hint: "DND5E.FlagsResourcefulHint",
+    section: "DND5E.RacialTraits",
+    type: Boolean
   }
 };
 preLocalize("characterFlags", { keys: ["name", "hint", "section"] });
