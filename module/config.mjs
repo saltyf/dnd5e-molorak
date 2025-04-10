@@ -2179,12 +2179,12 @@ DND5E.currencies = {
     conversion: 1,
     icon: "systems/dnd5e/icons/currency/gold.webp"
   },
-  ep: {
-    label: "DND5E.CurrencyEP",
-    abbreviation: "DND5E.CurrencyAbbrEP",
-    conversion: 2,
-    icon: "systems/dnd5e/icons/currency/electrum.webp"
-  },
+  // ep: {
+  //   label: "DND5E.CurrencyEP",
+  //   abbreviation: "DND5E.CurrencyAbbrEP",
+  //   conversion: 2,
+  //   icon: "systems/dnd5e/icons/currency/electrum.webp"
+  // },
   sp: {
     label: "DND5E.CurrencySP",
     abbreviation: "DND5E.CurrencyAbbrSP",
