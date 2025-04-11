@@ -746,6 +746,10 @@ DND5E.tools = {
     ability: "int",
     id: "rTbVrNcwApnuTz5E"
   },
+  harvester: {
+    ability: "dex",
+    id: "jNs0lFWXOmChwYvy"
+  },
   herb: {
     ability: "int",
     id: "i89okN7GFTWHsvPy"
