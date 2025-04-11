@@ -3844,41 +3844,34 @@ DND5E.languages = {
     selectable: false,
     children: {
       common: "DND5E.Language.Language.Common",
-      draconic: "DND5E.Language.Language.Draconic",
-      dwarvish: "DND5E.Language.Language.Dwarvish",
-      elvish: "DND5E.Language.Language.Elvish",
-      giant: "DND5E.Language.Language.Giant",
-      gnomish: "DND5E.Language.Language.Gnomish",
-      goblin: "DND5E.Language.Language.Goblin",
-      halfling: "DND5E.Language.Language.Halfling",
-      orc: "DND5E.Language.Language.Orc",
+      aquan: "DND5E.Language.Language.Aquan",
+      auran: "DND5E.Language.Language.Auran",
+      ignan: "DND5E.Language.Language.Ignan",
+      terran: "DND5E.Language.Language.Terran",
       sign: "DND5E.Language.Language.CommonSign"
     }
   },
-  exotic: {
+  rare: {
     label: "DND5E.Language.Category.Rare",
     selectable: false,
     children: {
-      aarakocra: "DND5E.Language.Language.Aarakocra",
+      primordial: "DND5E.Language.Language.Primordial",
       abyssal: "DND5E.Language.Language.Abyssal",
-      cant: "DND5E.Language.Language.ThievesCant",
-      celestial: "DND5E.Language.Language.Celestial",
-      deep: "DND5E.Language.Language.DeepSpeech",
-      druidic: "DND5E.Language.Language.Druidic",
-      gith: "DND5E.Language.Language.Gith",
-      gnoll: "DND5E.Language.Language.Gnoll",
       infernal: "DND5E.Language.Language.Infernal",
-      primordial: {
-        label: "DND5E.Language.Language.Primordial",
-        children: {
-          aquan: "DND5E.Language.Language.Aquan",
-          auran: "DND5E.Language.Language.Auran",
-          ignan: "DND5E.Language.Language.Ignan",
-          terran: "DND5E.Language.Language.Terran"
-        }
-      },
-      sylvan: "DND5E.Language.Language.Sylvan",
-      undercommon: "DND5E.Language.Language.Undercommon"
+      deep: "DND5E.Language.Language.DeepSpeech",
+      giant: "DND5E.Language.Language.Giant",
+      orc: "DND5E.Language.Language.Orc",
+      dwarvish: "DND5E.Language.Language.Dwarvish",
+    }
+  },
+  exotic: {
+    label: "DND5E.Language.Category.Exotic",
+    selectable: false,
+    children: {
+      celestial: "DND5E.Language.Language.Celestial",
+      draconic: "DND5E.Language.Language.Draconic",
+      cant: "DND5E.Language.Language.ThievesCant",
+      druidic: "DND5E.Language.Language.Druidic"
     }
   }
 };
