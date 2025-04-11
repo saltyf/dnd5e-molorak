@@ -3865,7 +3865,7 @@ DND5E.languages = {
       deep: "DND5E.Language.Language.DeepSpeech",
       giant: "DND5E.Language.Language.Giant",
       orc: "DND5E.Language.Language.Orc",
-      dwarvish: "DND5E.Language.Language.Dwarvish",
+      dwarvish: "DND5E.Language.Language.Dwarvish"
     }
   },
   exotic: {
@@ -3881,8 +3881,9 @@ DND5E.languages = {
 };
 preLocalize("languages", { key: "label" });
 preLocalize("languages.standard.children", { key: "label", sort: true });
+preLocalize("languages.rare.children", { key: "label", sort: true });
 preLocalize("languages.exotic.children", { key: "label", sort: true });
-preLocalize("languages.exotic.children.primordial.children", { sort: true });
+// preLocalize("languages.exotic.children.primordial.children", { sort: true });
 
 /* -------------------------------------------- */
 
